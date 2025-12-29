@@ -1,35 +1,48 @@
-# Mobile Communication System Simulation 📱📡
+# Simple Mobile-Communication System 📱📡
 
-An Object-Oriented Programming (OOP) simulation of a mobile network infrastructure, implemented in **Java**. This project models the interaction between mobile devices, SIM cards, and network antennas to handle call logic and signal coverage.
+A Java-based simulation of a mobile network infrastructure using Object-Oriented Programming (OOP) principles. This project models how phones, SIM cards, and antennas interact to manage calls and signal coverage.
 
 ## 🚀 Project Overview
-This system simulates the real-world requirements for establishing mobile calls, focusing on:
-- **Connectivity:** Phones must be within the range of at least one antenna.
-- **Resources:** Calls require sufficient battery level and SIM card credit.
-- **Network Logic:** Antennas have limited capacity and must be interconnected (not isolated).
+This system simulates real-world mobile communication constraints:
+- **Coverage:** Phones must be within the range of at least one antenna.
+- **Resource Management:** Calls depend on battery levels and SIM credit.
+- **Network Topology:** Prevents "Isolated Antennas" by ensuring coverage overlap.
 
-## 🛠️ System Architecture
+## 🛠️ Core Components
 
 ### 1. **Phone Class**
-Handles device status including battery levels and location updates. It determines if a device is capable of initiating or receiving calls.
+Manages the device state:
+- Tracks `batteryLevel` and `Location`.
+- Handles `isCurrentlyOnCall` status.
+- **Mobility:** Includes logic to update location and verify signal continuity.
 
 ### 2. **SimCard Class**
-Manages subscriber identity, activity status, and credit balance. It handles the financial logic of deducting credit per call.
+Handles subscriber data:
+- Stores `phoneNumber` and `creditBalance`.
+- Validates if the SIM is `active`.
+- Deducts credit only upon successful call establishment.
 
 ### 3. **Antenna Class**
-Represents network towers with a specific coverage radius and call capacity. It uses geometric distance to verify if a device is "In Range".
+Represents a cell tower:
+- Defined by a `radius` (coverage area) and `capacity` (max simultaneous calls).
+- Tracks `activeCalls` to prevent network congestion.
 
 ### 4. **Network Class**
-The backbone of the system. It manages the list of antennas and ensures the "No Isolated Antenna" rule is applied when expanding the network.
+The system controller:
+- Manages all antennas.
+- **No-Isolation Policy:** New antennas must overlap with existing ones to be added.
+- Finds the **nearest available** antenna for any given phone location.
 
-## 📋 Requirements for a Successful Call
-As per the project specifications, a call is established only if:
-- [x] **Caller:** Has battery > 0, Active SIM, and Credit >= 1.
-- [x] **Receiver:** Has battery > 0, Active SIM, and is not currently on another call.
-- [x] **Coverage:** Both parties must be within the range of an available antenna.
-- [x] **Capacity:** The connected antennas must have available slots (`activeCalls < capacity`).
+## 📋 Communication Rules (Business Logic)
+A call is established only when **all** the following conditions are met:
+- **Caller Side:** Battery > 0, SIM active, and sufficient credit.
+- **Receiver Side:** Battery > 0, SIM active, and not already on another call.
+- **Infrastructure:** Both phones must be within range of an antenna with free capacity.
 
 ## 💻 How to Run
-Clone the repository:
+1. Clone this repository:
    ```bash
-   git clone [https://github.com/your-username/repository-name.git](https://github.com/your-username/repository-name.git)
+   git clone [https://github.com/YOUR_USERNAME/Simple-Mobile-Communication-System.git](https://github.com/YOUR_USERNAME/Simple-Mobile-Communication-System.git)
+
+2. Open the project in any Java IDE.
+3. Run Main.java to see the console output of various simulation scenarios.
