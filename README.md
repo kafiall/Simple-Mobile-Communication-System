@@ -51,6 +51,6 @@ A call is established only when **all** the following conditions are met:
 1. **Allouni Abdelkafi**
 2. **Hessainit Ramzi**
 3. **Rahal Khalil**
-4. **Hamani Ilyes**
+4. **Hamani Ilyas**
 
 > This project was developed as part of the **Object Oriented Programming 1** module
