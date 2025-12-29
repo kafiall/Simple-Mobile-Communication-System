@@ -1,7 +1,5 @@
 package classes;
 
-//! Force to End Call when out of range
-
 public class Phone {
 
     //==================== Attributes =================================
@@ -141,3 +139,4 @@ public class Phone {
         isOnCall = false;
     }
 }
+
