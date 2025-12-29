@@ -46,3 +46,11 @@ A call is established only when **all** the following conditions are met:
 
 2. Open the project in any Java IDE.
 3. Run Main.java to see the console output of various simulation scenarios.
+
+## 📝 Authors
+1. **Allouni Abdelkafi**
+2. **Hessainit Ramzi**
+3. **Rahal Khalil**
+4. **Hamani Ilyes**
+
+> This project was developed as part of the **Object Oriented Programming 1** module
