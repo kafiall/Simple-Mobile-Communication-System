@@ -30,6 +30,6 @@ As per the project specifications, a call is established only if:
 - [x] **Capacity:** The connected antennas must have available slots (`activeCalls < capacity`).
 
 ## 💻 How to Run
-1. Clone the repository:
+Clone the repository:
    ```bash
    git clone [https://github.com/your-username/repository-name.git](https://github.com/your-username/repository-name.git)
