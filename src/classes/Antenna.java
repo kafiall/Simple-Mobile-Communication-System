@@ -17,27 +17,29 @@ public class Antenna {
         this.activeCalls = 0;
     }
 
- // G & S --------------------------------------
+    // ---------------- G & S ----------------------------
     
-    public Location getLocation() { return location; }
-    public double getRadius() { return radius; }
-    public int getCapacity() { return capacity; }
-    public int getActiveCalls() { return activeCalls; }
+    public Location getLocation() { return this.location; }
+    public double getRadius() { return this.radius; }
+    public int getCapacity() { return this.capacity; }
+    public int getActiveCalls() { return this.activeCalls; }
     public void setCapacity(int capacity) { this.capacity = capacity; }
 
-    // is itt in the range ?? ----------------------------
+    // ------------ is itt in the range ?? ----------------
     
     public boolean isPhoneInRange(Location phoneLocation)
     {
-        return location.distanceTo(phoneLocation) <= radius;
+        return this.location.distanceTo(phoneLocation) <= this.radius;
     }
 
-    // can accept new call ? ------------------------------
+    // ----------- can accept new call ? -------------------
     
     public boolean canAcceptNewCall() {
         return activeCalls < capacity;
     }
-
+    
+    // -----------------------------------------------------
+    
     public void incrementActiveCalls() {
         if (activeCalls < capacity)
             activeCalls++;
