@@ -42,7 +42,7 @@ A call is established only when **all** the following conditions are met:
 ## 💻 How to Run
 1. Clone this repository:
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/Simple-Mobile-Communication-System.git](https://github.com/kafiall/Simple-Mobile-Communication-System.git)
+   git clone [https://github.com/kafiall/Simple-Mobile-Communication-System.git]
 
 2. Open the project in any Java IDE.
 3. Run Main.java to see the console output of various simulation scenarios.
